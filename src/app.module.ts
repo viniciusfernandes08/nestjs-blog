@@ -21,7 +21,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
           return {
             type: 'better-sqlite3',
             database: process.env.DB_DATABASE || './db.sqlite',
-            synchronize: process.env.DB_SYNCHRONIZE === '1',
+            synchronize: process.env.DB_SYNC === '1',
             autoLoadEntities: process.env.DB_AUTO_LOAD_ENTITIES === '1',
           };
         }
@@ -33,7 +33,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
           username: process.env.DB_USERNAME,
           password: process.env.DB_PASSWORD,
           database: process.env.DB_DATABASE,
-          synchronize: process.env.DB_SYNCHRONIZE === '1',
+          synchronize: process.env.DB_SYNC === '1',
           autoLoadEntities: process.env.DB_AUTO_LOAD_ENTITIES === '1',
         };
       },
